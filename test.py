@@ -1,9 +1,31 @@
-import unittest
-import BowlingGame
+import unittest #imports the testing framework
+import BowlingGame #imports the class for the bowling game
 
 class TestBowlingGame(unittest.TestCase):
     def setUp(self):
-        self.game = BowlingGame.BowlingGame()
+        self.game = BowlingGame.BowlingGame() #sets up an instance of the test
+
+
+    # test cases for one type of roll 
+
+    def test_one_strike(self):
+        self.game.roll(10)
+        self.game.roll(4)
+        self.game.roll(3)
+        self.rollMany(0,16)
+        assert self.game.score() == 24
+
+    # test for one strike
+
+
+    def testOneSpare(self):
+        self.game.roll(5)
+        self.game.roll(5)
+        self.game.roll(3)
+        self.rollMany(0,17)
+        assert self.game.score() == 16
+
+    # test for one spare
 
 
     def testGutterGame(self):
@@ -17,20 +39,10 @@ class TestBowlingGame(unittest.TestCase):
         assert self.game.score() == 20
 
 
-    def testOneSpare(self):
-        self.game.roll(5)
-        self.game.roll(5)
-        self.game.roll(3)
-        self.rollMany(0,17)
-        assert self.game.score() == 16
+    
 
 
-    def testOneStrike(self):
-        self.game.roll(10)
-        self.game.roll(4)
-        self.game.roll(3)
-        self.rollMany(0,16)
-        assert self.game.score() == 24
+    
 
 
     def testPerfectGame(self):
