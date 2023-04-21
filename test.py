@@ -25,7 +25,7 @@ class TestBowlingGame(unittest.TestCase):
         self.game.rolls(5)
         self.game.rolls(3)
         self.rollMany(0, 17)
-        assert self.game.score()==16
+        assert self.game.score() == 16
 
 
     def testOneStrike(self):
