@@ -10,6 +10,8 @@ class BowlingGame:
     def roll(self,pins):
         self.rolls.append(pins)
 
+        
+
     def score(self):
         result = 0
         rollIndex=0
