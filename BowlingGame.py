@@ -23,10 +23,12 @@ class BowlingGame:
             if self.is_strike(roll_index):
                 result += self.strike_score(roll_index)
                 roll_index += 1
+                #checks if roll was a strike
 
             elif self.is_spare(roll_index):
                 result += self.spare_score(roll_index)
                 roll_index += 2
+                #checks if roll was a spare
 
             else:
                 result += self.frame_score(roll_index)
