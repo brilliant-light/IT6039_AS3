@@ -17,46 +17,46 @@ class BowlingGame:
 
     def score(self):
         result = 0
-        rollIndex = 0
+        roll_index = 0
         for frameIndex in range(10):
 
-            if self.isStrike(rollIndex):
-                result += self.strikeScore(rollIndex)
-                rollIndex += 1
+            if self.is_strike(roll_index):
+                result += self.strike_score(roll_index)
+                roll_index += 1
 
-            elif self.isSpare(rollIndex):
-                result += self.spareScore(rollIndex)
-                rollIndex += 2
+            elif self.isSpare(roll_index):
+                result += self.spare_score(roll_index)
+                roll_index += 2
 
             else:
-                result += self.frameScore(rollIndex)
-                rollIndex += 2
+                result += self.frame_score(roll_index)
+                roll_index += 2
         return result
         
     # runs the game and checks to update the score at each frame
 
-    def isStrike(self, rollIndex):
-        return self.rolls[rollIndex] == 10
+    def is_strike(self, roll_index):
+        return self.rolls[roll_index] == 10
     
     # checks if the current score is a strike
 
-    def isSpare(self, rollIndex):
-        return self.rolls[rollIndex] + self.rolls[rollIndex + 1] == 10
+    def is_spare(self, roll_index):
+        return self.rolls[roll_index] + self.rolls[roll_index + 1] == 10
     
     # checks if the current score is a spare
     # (current roll + next roll adds to 10 or not)
 
-    def strikeScore(self, rollIndex):
-        return 10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
+    def strike_score(self, roll_index):
+        return 10 + self.rolls[roll_index + 1] + self.rolls[roll_index + 2]
     
     # calculates score including bonus points after a strike
 
-    def spareScore(self, rollIndex):
-        return 10 + self.rolls[rollIndex + 2]
+    def spare_score(self, roll_index):
+        return 10 + self.rolls[roll_index + 2]
 
     # calculates score including bonus points after a spare
 
-    def frameScore(self, rollIndex):
-        return self.rolls[rollIndex] + self.rolls[rollIndex + 1]
+    def frame_score(self, roll_index):
+        return self.rolls[roll_index] + self.rolls[roll_index + 1]
     
     # calculates frame when neither strike or spare was achieved
