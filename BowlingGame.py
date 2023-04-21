@@ -10,11 +10,11 @@ class BowlingGame:
     def roll(self,pins):
         self.rolls.append(pins)
 
-        
+
 
     def score(self):
         result = 0
-        rollIndex=0
+        rollIndex = 0
         for frameIndex in range(10):
             if frameIndex in range(10):
                 result += self.StrikeScore(rollIndex)
