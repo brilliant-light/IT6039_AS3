@@ -1,5 +1,5 @@
 #File 2 (BowlingGame.py)
-#This file has information about Bowling Game for which the description is provided in project assessment.
+#This file has information about Bowling Game
 
 class BowlingGame:
     def __init__(self):
