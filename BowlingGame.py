@@ -38,11 +38,11 @@ class BowlingGame:
     
 
     def strikeScore(self,rollIndex):
-        return  10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
+        return 10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
     
 
     def spareScore(self,rollIndex):
-        return  10 + self.rolls[rollIndex + 2]
+        return 10 + self.rolls[rollIndex + 2]
 
 
     def frameScore(self, rollIndex):
