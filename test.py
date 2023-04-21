@@ -33,21 +33,26 @@ class TestBowlingGame(unittest.TestCase):
             self.game.roll(0)
         assert self.game.score() == 0
 
+    # test for a gutter game AKA no pins knocked down
 
     def test_all_ones(self):
         self.roll_many(1,20)
         assert self.game.score() == 20
+
+    # test for only knocking one pin down each turn
 
 
     def test_perfect_game(self):
         self.roll_many(10,12)
         assert self.game.score() == 300
 
+    # testing for the 'perfect game'
 
     def test_many_spare(self):
         self.roll_many(5,21)
         assert self.game.score() == 150
 
+    # testing for many spares
 
     def roll_many(self, pins, rolls):
         for i in range(rolls):
@@ -61,6 +66,3 @@ if __name__ == '__main__':
 #2: Refactor the code (Improve its structure without changing external behaviour).
 #3: Report everything using github commits and versioning control.
 
-
-###### Important #####
-# Please complete your project and all tasks according to assessment description provided in CANVAS.
