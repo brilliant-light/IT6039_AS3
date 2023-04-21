@@ -7,7 +7,7 @@ class BowlingGame:
 
 
 
-    def roll(self,pins):
+    def roll(self, pins):
         self.rolls.append(pins)
 
 
