@@ -37,7 +37,7 @@ class BowlingGame:
         return self.rolls[rollIndex] + self.rolls[rollIndex + 1] == 10
     
 
-    def stickeScore(self,rollIndex):
+    def strikeScore(self,rollIndex):
         return  10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
     
 
