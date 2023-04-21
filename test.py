@@ -41,6 +41,18 @@ class TestBowlingGame(unittest.TestCase):
 
     # test for only knocking one pin down each turn
 
+    def test_all_fours(self):
+        self.roll_many(4,20)
+        assert self.game.score() == 80
+
+    # test for only knocking four pins down each turn
+
+    def test_all_five(self):
+        self.roll_many(5,20)
+        assert self.game.score() == 100
+
+    # test for only knocking four pins down each turn
+
 
     def test_perfect_game(self):
         self.roll_many(10,12)
