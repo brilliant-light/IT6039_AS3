@@ -47,4 +47,3 @@ class BowlingGame:
 
     def frameScore(self, rollIndex):
         return self.rolls[rollIndex] + self.rolls[rollIndex + 1]
-		
