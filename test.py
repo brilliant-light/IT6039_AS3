@@ -51,7 +51,7 @@ class TestBowlingGame(unittest.TestCase):
 
     def roll_many(self, pins, rolls):
         for i in range(rolls):
-            self.game.rolls(pins)
+            self.game.roll(pins)
 
 if __name__ == '__main__':
     unittest.main()
