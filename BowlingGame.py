@@ -42,7 +42,7 @@ class BowlingGame:
     
 
     def spareScore(self,rollIndex):
-        return  10+ self.rolls[rollIndex+2]
+        return  10 + self.rolls[rollIndex + 2]
 
 
     def frameScore(self, rollIndex):
