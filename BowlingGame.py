@@ -34,7 +34,7 @@ class BowlingGame:
     
 
     def isSpare(self, rollIndex):
-        return self.rolls[rollIndex]+ self.rolls[rollIndex+1]==10
+        return self.rolls[rollIndex] + self.rolls[rollIndex + 1] == 10
     
 
     def stickeScore(self,rollIndex):
