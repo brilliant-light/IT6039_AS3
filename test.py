@@ -18,7 +18,7 @@ class TestBowlingGame(unittest.TestCase):
     # test for one strike
 
 
-    def testOneSpare(self):
+    def test_one_spare(self):
         self.game.roll(5)
         self.game.roll(5)
         self.game.roll(3)
@@ -28,34 +28,28 @@ class TestBowlingGame(unittest.TestCase):
     # test for one spare
 
 
-    def testGutterGame(self):
+    def test_gutter_game(self):
         for i in range(0, 20):
             self.game.roll(0)
         assert self.game.score() == 0
 
 
-    def testAllOnes(self):
+    def test_all_ones(self):
         self.rollMany(1,20)
         assert self.game.score() == 20
 
 
-    
-
-
-    
-
-
-    def testPerfectGame(self):
+    def test_perfect_game(self):
         self.rollMany(10,12)
         assert self.game.score() == 300
 
 
-    def testManySpare(self):
+    def test_many_spare(self):
         self.rollMany(5,21)
         assert self.game.score() == 150
 
 
-    def rollMany(self, pins, rolls):
+    def roll_many(self, pins, rolls):
         for i in range(rolls):
             self.game.rolls(pins)
 
