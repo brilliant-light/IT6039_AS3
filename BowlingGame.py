@@ -24,7 +24,7 @@ class BowlingGame:
                 result += self.strike_score(roll_index)
                 roll_index += 1
 
-            elif self.isSpare(roll_index):
+            elif self.is_spare(roll_index):
                 result += self.spare_score(roll_index)
                 roll_index += 2
 
